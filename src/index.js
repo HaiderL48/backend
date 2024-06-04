@@ -8,9 +8,8 @@ dotenv.config({
 
 connectDb()
    .then(() => {
-      const port = process.env.PORT || 9000;
-      app.listen(port, () => {
-         console.log(`server is runing on ${port}`);
+      app.listen(process.env.PORT || 9000, () => {
+         console.log(`server is runing on ${process.env.PORT}`);
       });
    })
    .catch((error) => {
